@@ -1,4 +1,5 @@
 <?php
+namespace Filemaker;
 /**
  * FileMaker API for PHP
  *
@@ -39,7 +40,7 @@ class FileMaker_RelatedSet
     /**
      * Portal constructor.
      *
-     * @param FileMaker_Layout &$layout FileMaker_Layout object that this 
+     * @param FileMaker_Layout &$layout FileMaker_Layout object that this
      * portal is on.
      */
     function FileMaker_RelatedSet(&$layout)
@@ -48,7 +49,7 @@ class FileMaker_RelatedSet
     }
 
     /**
-     * Returns the name of the related table from which this portal displays 
+     * Returns the name of the related table from which this portal displays
      * related records.
      *
      * @return string Name of related table for this portal.
@@ -73,7 +74,7 @@ class FileMaker_RelatedSet
      *
      * @param string $fieldName Name of field.
      *
-     * @return FileMaker_Field|FileMaker_Error Field object, if successful. 
+     * @return FileMaker_Field|FileMaker_Error Field object, if successful.
      *         Otherwise, an Error object.
      */
     function &getField($fieldName)
@@ -82,7 +83,7 @@ class FileMaker_RelatedSet
     }
 
     /**
-     * Returns an associative array with the names of all fields as keys and 
+     * Returns an associative array with the names of all fields as keys and
      * FileMaker_Field objects as the array values.
      *
      * @return array Array of {@link FileMaker_Field} objects.
@@ -97,7 +98,7 @@ class FileMaker_RelatedSet
      *
      * @access private
      *
-     * @return boolean|FileMaker_Error TRUE, if successful. Otherwise, an Error 
+     * @return boolean|FileMaker_Error TRUE, if successful. Otherwise, an Error
      *         object.
      */
     function loadExtendedInfo()

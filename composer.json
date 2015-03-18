@@ -8,6 +8,11 @@
 		"issues": "https://github.com/Konro1/filemaker/issues",
 		"source": "https://github.com/Konro1/filemaker/"
 	},
+	 "autoload": {
+        "psr-4": {
+            "Filemaker\\": ""
+        }
+    },
 	"require": {
 		"php": ">=5.3.3",
 		"composer/installers": "~1.0"

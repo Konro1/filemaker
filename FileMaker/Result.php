@@ -1,4 +1,5 @@
 <?php
+namespace Filemaker;
 /**
  * FileMaker API for PHP
  *
@@ -20,8 +21,8 @@ require_once dirname(__FILE__) . '/Implementation/ResultImpl.php';
 /**#@-*/
 
 /**
- * Result set description class. Contains all the information about a set of 
- * records returned by a command. 
+ * Result set description class. Contains all the information about a set of
+ * records returned by a command.
  *
  * @package FileMaker
  */
@@ -38,7 +39,7 @@ class FileMaker_Result
     /**
      * Result object constructor.
      *
-     * @param FileMaker_Implementation &$fm FileMaker_Implementation object 
+     * @param FileMaker_Implementation &$fm FileMaker_Implementation object
      *        that this result came from.
      */
     function FileMaker_Result(&$fm)
@@ -47,7 +48,7 @@ class FileMaker_Result
     }
 
     /**
-     * Returns a FileMaker_Layout object that describes the layout of this 
+     * Returns a FileMaker_Layout object that describes the layout of this
      * result set.
      *
      * @return FileMaker_Layout Layout object.
@@ -58,11 +59,11 @@ class FileMaker_Result
     }
 
     /**
-     * Returns an array containing each record in the result set. 
-     * 
+     * Returns an array containing each record in the result set.
+     *
      * Each member of the array is a FileMaker_Record object, or an
      * instance of the alternate class you specified to use for records
-     * (see {@link FileMaker_Record}. The array may be empty if 
+     * (see {@link FileMaker_Record}. The array may be empty if
      * the result set contains no records.
      *
      * @return array Record objects.
@@ -73,11 +74,11 @@ class FileMaker_Result
     }
 
     /**
-     * Returns a list of the names of all fields in the records in 
-     * this result set. 
-     * 
-     * Only the field names are returned. If you need additional 
-     * information, examine the Layout object provided by the 
+     * Returns a list of the names of all fields in the records in
+     * this result set.
+     *
+     * Only the field names are returned. If you need additional
+     * information, examine the Layout object provided by the
      * {@link getLayout()} method.
      *
      * @return array List of field names as strings.
@@ -88,7 +89,7 @@ class FileMaker_Result
     }
 
     /**
-     * Returns the names of related tables for all portals present in records 
+     * Returns the names of related tables for all portals present in records
      * in this result set.
      *
      * @return array List of related table names as strings.
@@ -120,10 +121,10 @@ class FileMaker_Result
 
     /**
      * Returns the number of records in the filtered result set.
-     * 
-     * If no range parameters were specified on the Find command, 
+     *
+     * If no range parameters were specified on the Find command,
      * then this value is equal to the result of the {@link getFoundSetCount()}
-     * method. It is always equal to the value of 
+     * method. It is always equal to the value of
      * count($response->{@link getRecords()}).
      *
      * @return integer Filtered record count.
@@ -132,7 +133,7 @@ class FileMaker_Result
     {
         return $this->_impl->getFetchCount();
     }
-    
+
     /**
      * Returns the first record in this result set.
      *
@@ -142,7 +143,7 @@ class FileMaker_Result
     {
     	return $this->_impl->getFirstRecord();
     }
-    
+
     /**
      * Returns the last record in this result set.
      *

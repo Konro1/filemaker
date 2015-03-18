@@ -1,4 +1,5 @@
 <?php
+namespace Filemaker;
 /**
  * FileMaker API for PHP
  *
@@ -41,7 +42,7 @@ class FileMaker_Layout
     /**
      * Layout object constructor.
      *
-     * @param FileMaker_Implementation &$fm FileMaker_Implementation object 
+     * @param FileMaker_Implementation &$fm FileMaker_Implementation object
      *        that this layout was created through.
      */
     function FileMaker_Layout(&$fm)
@@ -84,7 +85,7 @@ class FileMaker_Layout
      *
      * @param string $fieldName Name of field.
      *
-     * @return FileMaker_Field|FileMaker_Error Field object, if successful. 
+     * @return FileMaker_Field|FileMaker_Error Field object, if successful.
      *         Otherwise, an Error object.
      */
     function getField($fieldName)
@@ -115,12 +116,12 @@ class FileMaker_Layout
     }
 
     /**
-     * Returns a FileMaker_RelatedSet object that describes the specified 
+     * Returns a FileMaker_RelatedSet object that describes the specified
      * portal.
      *
      * @param string $relatedSet Name of the related table for a portal.
      *
-     * @return FileMaker_RelatedSet|FileMaker_Error RelatedSet object, if 
+     * @return FileMaker_RelatedSet|FileMaker_Error RelatedSet object, if
      *         successful. Otherwise, an Error object.
      */
     function &getRelatedSet($relatedSet)
@@ -129,7 +130,7 @@ class FileMaker_Layout
     }
 
     /**
-     * Returns an associative array with the related table names of all 
+     * Returns an associative array with the related table names of all
      * portals as keys and FileMaker_RelatedSet objects as the array values.
      *
      * @return array Array of {@link FileMaker_RelatedSet} objects.
@@ -154,7 +155,7 @@ class FileMaker_Layout
      * Returns the list of defined values in the specified value list.
      *
      * @param string $valueList Name of value list.
-     * @param string  $recid Record from which the value list should be 
+     * @param string  $recid Record from which the value list should be
      *        displayed.
      *
      * @return array List of defined values.
@@ -168,25 +169,25 @@ class FileMaker_Layout
         return $this->_impl->getValueList($valueList, $recid);
     }
 
-    
+
 
     /**
 
-     * Returns the list of defined values in the specified value list. 
+     * Returns the list of defined values in the specified value list.
 
-     * This method supports single, 2nd only, and both fields value lists. 
+     * This method supports single, 2nd only, and both fields value lists.
 
      *
 
      * @param string $valueList Name of value list.
 
-     * @param string  $recid Record from which the value list should be 
+     * @param string  $recid Record from which the value list should be
 
      *        displayed.
 
      *
 
-     * @return array of display names and its corresponding 
+     * @return array of display names and its corresponding
 
      * value from the value list.
 
@@ -201,14 +202,14 @@ class FileMaker_Layout
     }
 
     /**
-     * Returns a multi-level associative array of value lists. 
-     * The top-level array has names of value lists as keys and arrays as 
-     * values. The second level arrays are the lists of defined values from 
+     * Returns a multi-level associative array of value lists.
+     * The top-level array has names of value lists as keys and arrays as
+     * values. The second level arrays are the lists of defined values from
      * each value list.
      *
-     * @param string  $recid Record from which the value list should be 
+     * @param string  $recid Record from which the value list should be
      *        displayed.
-     * 
+     *
      * @return array Array of value-list arrays.
 
      * @deprecated Use getValueListTwoFields instead.
@@ -220,25 +221,25 @@ class FileMaker_Layout
         return $this->_impl->getValueLists($recid);
     }
 
-    
+
 
     /**
 
-     * Returns a multi-level associative array of value lists. 
+     * Returns a multi-level associative array of value lists.
 
-     * The top-level array has names of value lists as keys and associative arrays as 
+     * The top-level array has names of value lists as keys and associative arrays as
 
-     * values. The second level associative arrays are lists of display name and its corresponding 
+     * values. The second level associative arrays are lists of display name and its corresponding
 
      * value from the value list.
 
      *
 
-     * @param string  $recid Record from which the value list should be 
+     * @param string  $recid Record from which the value list should be
 
      *        displayed.
 
-     * 
+     *
 
      * @return array Array of value-list associative arrays.
 
@@ -257,9 +258,9 @@ class FileMaker_Layout
      *
      * @access private
      *
-     * @param string  $recid Record from which to load extended information. 
+     * @param string  $recid Record from which to load extended information.
      *
-     * @return boolean|FileMaker_Error TRUE, if successful. Otherwise, an 
+     * @return boolean|FileMaker_Error TRUE, if successful. Otherwise, an
      *         Error object.
      */
     function loadExtendedInfo($recid = null)
