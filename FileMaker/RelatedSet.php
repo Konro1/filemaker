@@ -1,5 +1,4 @@
 <?php
-namespace Filemaker;
 /**
  * FileMaker API for PHP
  *

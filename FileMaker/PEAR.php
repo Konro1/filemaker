@@ -1,5 +1,4 @@
 <?php
-namespace Filemaker;
 /**
  * PEAR, the PHP Extension and Application Repository
  *
