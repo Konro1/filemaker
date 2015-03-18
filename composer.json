@@ -1,0 +1,15 @@
+{
+	"name": "Konro1/filemaker",
+	"type": "package",
+	"description": "FileMaker Api",
+	"homepage": "https://github.com/Konro1/filemaker",
+	"license": "MIT",
+	"support": {
+		"issues": "https://github.com/Konro1/filemaker/issues",
+		"source": "https://github.com/Konro1/filemaker/"
+	},
+	"require": {
+		"php": ">=5.3.3",
+		"composer/installers": "~1.0"
+	}
+}
